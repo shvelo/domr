@@ -2,11 +2,13 @@
 require 'domainr'
 require 'rainbow'
 
+# check for empty query
 if !ARGV[0]
 	puts "Please enter a name".color(:red)
 	exit
 end
 
+# perform a query
 search = Domainr.search(ARGV[0])
 
 puts "\n"
@@ -15,16 +17,23 @@ puts "Your query: " << search.query
 
 puts "\n"
 
+# output results
 search.results.each do |result|
+	
+	# determine color to show
 	if result.availability == 'available'
 		color = :green
 	elsif result.availability == 'taken' || result.availability == 'unavailable'
 		color = :red
-	elsif result.availability == 'tld'
+	elsif result.availability == 'maybe'
 		color = :yellow
 	else
 		color = :white
 	end
+	
+	# final output string
 	string = " " << result.domain << " " << result.availability
+	
+	# output colorized string
 	puts string.color(color)
 end

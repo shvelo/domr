@@ -3,8 +3,8 @@ domr
 
 Quick domain search
 
-## Installation
+### Installation
 ``` gem install domr ```
 
-## Usage
+### Usage
 ``` domr example.com ```
