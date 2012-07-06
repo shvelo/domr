@@ -25,9 +25,6 @@ class Domr
   # Arguments:
   #   query: (String)
   def self.search query
-
-    # Output a newline
-    puts "\n"
     
     # Form the request string
     request = Net::HTTP::Get.new("/api/json/search?q=" << URI.escape(query))
