@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'domr'
-  s.version     = '0.0.4'
+  s.version     = '0.0.5'
   s.date        = '2012-07-12'
   s.summary     = "Domainr quick search"
   s.description = "Quickly search for available domains"
