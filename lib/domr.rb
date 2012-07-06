@@ -13,7 +13,7 @@ class Domr
   #    example.com taken
   #    example.net taken
   #    example.org taken
-  #   => Nil
+  #   => true
   #
   # Arguments:
   #   query: (String)
@@ -56,6 +56,6 @@ class Domr
       puts string.color(color).bright
     end
     
-    Nil
+    true
   end
 end
