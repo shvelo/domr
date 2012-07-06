@@ -4,7 +4,7 @@ Domr
 Ruby gem for quick domain search
 Using Domainr JSON API
 
-Tested on Ruby 1.9.3 on Windows
+Requires Ruby 1.9.1 or above
 
 ### Installation
     gem install domr
