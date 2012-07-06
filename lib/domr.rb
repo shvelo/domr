@@ -29,7 +29,7 @@ class Domr
     
     # Check for errors
     if response.code != "200"
-      puts "HTTP error".color(:red).bright # Color is red
+      puts "HTTP error".color(:red).bright
       return false
     end
     
