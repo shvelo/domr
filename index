@@ -1,0 +1,9 @@
+Simple search for domain names
+
+Usage:
+
+$ domr <name>
+
+Example:
+
+$ domr example.com

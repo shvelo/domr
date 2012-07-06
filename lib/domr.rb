@@ -1,19 +1,9 @@
-# Domr
-# By Nick Shvelidze
-# Simple search for domain names
-# Command-Line usage:
-#    domr example.com
-# => example.com is taken
-
 require 'rainbow'
 require 'uri'
 require 'net/http'
 require 'json'
-
-# Simple search for domain names
+ 
 # The main class
-# Usage:
-# Domr.search(query)
 class Domr
   
   # Perform a query on domainr API
