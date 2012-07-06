@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'domr'
-  s.version     = '0.1.3'
+  s.version     = '0.1.4'
   s.date        = '2012-07-12'
   s.summary     = "Domainr quick search"
   s.authors     = ["Nick Shvelidze"]
@@ -16,6 +16,5 @@ Gem::Specification.new do |s|
   s.extra_rdoc_files = ['index']
   s.description = <<-EOF
     Quickly search for available domain names from command line.
-    Usage: domr <name>
   EOF
 end

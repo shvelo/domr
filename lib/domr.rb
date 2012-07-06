@@ -9,8 +9,11 @@ class Domr
   # Perform a query on domainr API
   #
   # Example:
-  #   >> Domr.search "exapmle"
-  #   => example.com taken
+  #   >> Domr.search "example"
+  #    example.com taken
+  #    example.net taken
+  #    example.org taken
+  #   => Nil
   #
   # Arguments:
   #   query: (String)
@@ -52,5 +55,7 @@ class Domr
       # Output colorized string
       puts string.color(color).bright
     end
+    
+    Nil
   end
 end
