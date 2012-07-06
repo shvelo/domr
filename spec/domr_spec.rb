@@ -8,7 +8,7 @@ describe Domr do
       end
     end
     context "With string 'example'" do
-      it "Returns true'" do
+      it "Returns true" do
         Domr.search('example').should be_true
       end
     end
