@@ -12,4 +12,4 @@ Requires Ruby 1.9.1 or above
 ### Usage
     domr example.com
 
-![Output](http://shvelo.github.com/domr/images/output.jpg)
+![Output](http://shvelo.github.com/domr/images/full.jpg)
