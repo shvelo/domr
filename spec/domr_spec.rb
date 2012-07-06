@@ -19,13 +19,13 @@ describe 'Script domr' do
   context 'Without arguments' do
     it 'Exits with code 0' do
       system 'domr'
-      $?.exitstatus.should eql 0
+      $?.exitstatus.should_not eq 1
     end
   end
   context 'With argument "example"' do
     it 'Exits with code 0' do
       system 'domr example'
-      $?.exitstatus.should eql 0
+      $?.exitstatus.should_not eq 1
     end
   end
 end
