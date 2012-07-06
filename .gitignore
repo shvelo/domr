@@ -1,3 +1,4 @@
 .project
 images/Thumbs.db
 *.gem
+Gemfile.lock
