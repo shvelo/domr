@@ -5,8 +5,10 @@
 #    domr example.com
 # => example.com is taken
 
-require 'domainr'
 require 'rainbow'
+require 'uri'
+require 'net/http'
+require 'json'
 
 # Simple search for domain names
 # The main class
@@ -26,12 +28,23 @@ class Domr
 
     # Output a newline
     puts "\n"
-
+    
+    # Form the request string
+    request = "/api/json/search?q=" << URI.escape(query)
+    
     # Perform the actual query
-    response = Domainr.search(query)
+    response = Net::HTTP.start("domai.nr") { |http|
+      http.request request
+    }
+    
+    # Check for errors
+    if response.code != "200"
+      puts "HTTP error".color(:red)
+      exit
+    end
     
     # Output results
-    response.results.each do |result|
+    JSON.parse(response.body).results.each do |result|
 
       # Determine color to show
       if result.availability == 'available'
