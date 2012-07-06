@@ -19,15 +19,15 @@ class Domr
   def self.search query
 
     # Form the request string
-    request = Net::HTTP::Get.new("/api/json/search?q=" << URI.escape(query))
+    request = Net::HTTP::Get.new('/api/json/search?q=' << URI.escape(query))
 
     # Perform the actual query
-    response = Net::HTTP.start("domai.nr") do |http|
+    response = Net::HTTP.start('domai.nr') do |http|
       http.request request
     end
 
     # Check for errors
-    if response.code != "200"
+    if response.code != '200'
       puts "HTTP error".color(:red).bright
       return false
     end
@@ -48,7 +48,7 @@ class Domr
       end
 
       # Construct final output string
-      string = " " << result['domain'] << " " << result['availability']
+      string = ' ' << result['domain'] << ' ' << result['availability']
 
       # Output colorized string
       puts string.color(color).bright

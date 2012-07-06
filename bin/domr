@@ -3,13 +3,12 @@ require 'domr'
 
 # Check for empty query
 if !ARGV[0]
-	puts "Please enter a name".color(:red).bright
-	
-	# Exit the program
-	exit 1
+	arg = ''
+else
+	arg = ARGV[0]
 end
 
 # Perform the search
-if Domr.search(ARGV[0])
+if !Domr.search(arg)
 	exit 1
 end
