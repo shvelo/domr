@@ -6,8 +6,10 @@ if !ARGV[0]
 	puts "Please enter a name".color(:red).bright
 	
 	# Exit the program
-	exit
+	exit 1
 end
 
 # Perform the search
-Domr.search ARGV[0]
+if Domr.search(ARGV[0])
+	exit 1
+end

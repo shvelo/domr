@@ -30,9 +30,7 @@ class Domr
     # Check for errors
     if response.code != "200"
       puts "HTTP error".color(:red).bright # Color is red
-      
-      # Exit the program
-      exit
+      return false
     end
     
     # Output results
@@ -56,6 +54,6 @@ class Domr
       puts string.color(color).bright
     end
     
-    true
+    return true
   end
 end
