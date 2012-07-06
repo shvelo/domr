@@ -5,7 +5,7 @@ Gem::Specification.new do |s|
   s.summary     = "Domainr quick search"
   s.authors     = ["Nick Shvelidze"]
   s.email       = 'shveloo@gmail.com'
-  s.files       = ['lib/domr.rb','bin/domr','ext/mkrf_conf.rb']
+  s.files       = ['lib/domr.rb','bin/domr','ext/mkrf_conf.rb','Gemfile']
   s.add_runtime_dependency 'json'
   s.add_runtime_dependency 'rainbow'
   s.executables << 'domr'
