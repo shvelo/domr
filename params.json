@@ -1,0 +1,1 @@
+{"note":"Don't delete this file! It's used internally to help with page regeneration.","name":"Domr","tagline":"Quick domain search","google":"UA-30729286-1","body":"Domr\r\n====\r\n\r\nRuby gem for quick domain search\r\nUsing Domainr JSON API\r\n\r\nTested on Ruby 1.9.3 on Windows\r\n\r\n### Installation\r\n``` gem install domr ```\r\n\r\n### Usage\r\n``` domr example.com ```"}
