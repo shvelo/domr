@@ -12,4 +12,4 @@ Tested on Ruby 1.9.3 on Windows
 ### Usage
 ``` domr example.com ```
 
-![Output](//shvelo.github.com/domr/images/output.jpg)
+![Output](http://shvelo.github.com/domr/images/output.jpg)
