@@ -8,7 +8,7 @@ rescue NoMethodError
 end
 inst = Gem::DependencyInstaller.new
 begin
-  if RUBY_PLATFORM == 'mswin32' || RUBY_PLATFORM == 'mingw' || RUBY_PLATFORM == 'cygwin'
+  if RUBY_PLATFORM =~ /mswin32/ || RUBY_PLATFORM =~ /mingw/ || RUBY_PLATFORM =~ /cygwin/
     inst.install "win32console", "~> 1.3.2"
   else
     inst.install "windows-pr", "~> 1.2.1"
