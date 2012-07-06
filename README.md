@@ -7,9 +7,9 @@ Using Domainr JSON API
 Tested on Ruby 1.9.3 on Windows
 
 ### Installation
-``` gem install domr ```
+    gem install domr
 
 ### Usage
-``` domr example.com ```
+    domr example.com
 
 ![Output](http://shvelo.github.com/domr/images/output.jpg)
