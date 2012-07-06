@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'domr'
-  s.version     = '0.0.5'
+  s.version     = '0.0.6'
   s.date        = '2012-07-12'
   s.summary     = "Domainr quick search"
   s.description = "Quickly search for available domains"
@@ -13,5 +13,5 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'windows-pr'
   s.executables << 'domr'
   s.homepage    =
-    'http://github.com/shvelo/domr'
+    'http://shvelo.github.com/domr'
 end
