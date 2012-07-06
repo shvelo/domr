@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name                   = 'domr'
-  s.version                = '0.1.9'
+  s.version                = '0.2.0'
   s.summary                = 'Domainr quick search'
   s.date                   = '2012-07-08'
   s.authors                = ['Nick Shvelidze']
