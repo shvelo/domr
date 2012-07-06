@@ -39,7 +39,9 @@ class Domr
     
     # Check for errors
     if response.code != "200"
-      puts "HTTP error".color(:red)
+      puts "HTTP error".color(:red).bright # Color is red
+      
+      # Exit the program
       exit
     end
     
@@ -54,14 +56,14 @@ class Domr
       elsif result['availability'] == 'maybe'
         color = :yellow
       else
-        color = :white
+        color = :default
       end
 
       # Construct final output string
       string = " " << result['domain'] << " " << result['availability']
 
       # Output colorized string
-      puts string.color(color)
+      puts string.color(color).bright
     end
   end
 end

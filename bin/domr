@@ -3,7 +3,9 @@ require 'domr'
 
 # Check for empty query
 if !ARGV[0]
-	puts "Please enter a name".color(:red)
+	puts "Please enter a name".color(:red).bright
+	
+	# Exit the program
 	exit
 end
 

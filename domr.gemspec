@@ -10,6 +10,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'json'
   s.add_runtime_dependency 'rainbow'
   s.add_runtime_dependency 'win32console'
+  s.add_runtime_dependency 'windows-pr'
   s.executables << 'domr'
   s.homepage    =
     'http://github.com/shvelo/domr'
