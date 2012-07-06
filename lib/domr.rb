@@ -30,7 +30,7 @@ class Domr
     puts "\n"
     
     # Form the request string
-    request = "/api/json/search?q=" << URI.escape(query)
+    request = Net::HTTP::Get.new("/api/json/search?q=" << URI.escape(query))
     
     # Perform the actual query
     response = Net::HTTP.start("domai.nr") { |http|
@@ -44,21 +44,21 @@ class Domr
     end
     
     # Output results
-    JSON.parse(response.body).results.each do |result|
+    JSON.parse(response.body)['results'].each do |result|
 
       # Determine color to show
-      if result.availability == 'available'
+      if result['availability'] == 'available'
         color = :green
-      elsif result.availability == 'taken' || result.availability == 'unavailable'
+      elsif result['availability'] == 'taken' || result['availability'] == 'unavailable'
         color = :red
-      elsif result.availability == 'maybe'
+      elsif result['availability'] == 'maybe'
         color = :yellow
       else
         color = :white
       end
 
       # Construct final output string
-      string = " " << result.domain << " " << result.availability
+      string = " " << result['domain'] << " " << result['availability']
 
       # Output colorized string
       puts string.color(color)
