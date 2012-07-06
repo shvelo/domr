@@ -9,6 +9,8 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency 'json'
   s.add_runtime_dependency 'rainbow'
   s.executables << 'domr'
+  spec.requirements << 'Internet connection'
+  s.has_rdoc    = true
   s.homepage    = 'http://shvelo.github.com/domr'
   s.description = <<-EOF
     Quickly search for available domain names from command line.
