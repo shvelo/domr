@@ -7,16 +7,21 @@ require 'json'
 
 #
 # Example:
-#   >> Domr.search "example"
-#    example.com taken
-#    example.net taken
-#    example.org taken
-#   => true
+#   >> domr "example"
+#   => 1
 #
 # Arguments:
 #   query: (String)
-def domr query
+#   flag: (:none or :silent)
+def domr(query, flag = :none)
 
+  # Activate silent mode if flag is set
+  if flag == :silent
+    silent = true
+  else
+    silent = false
+  end
+  
   # Form the request string
   request = Net::HTTP::Get.new('/api/json/search?q=' << URI.escape(query))
 
@@ -27,8 +32,8 @@ def domr query
 
   # Check for errors
   if response.code != '200'
-    puts "HTTP error".color(:red).bright
-  return false
+    puts "HTTP error".color(:red).bright if !silent
+    return false
   end
 
   results = JSON.parse(response.body)['results']
@@ -52,8 +57,9 @@ def domr query
     string = ' ' << result['domain'] << ' ' << result['availability']
 
     # Output colorized string
-    puts string.color(color).bright
+    puts string.color(color).bright if !silent
   end
 
-  return results.length
+  # Return number of available domain names
+  return results.count { |result| result['availability'] == 'available' }
 end

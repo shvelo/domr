@@ -6,12 +6,12 @@ require 'domr'
 if !ARGV[0]
 	arg = ''
 else
-	arg = ARGV[0]
+	arg = ARGV.join " "
 end
 
 # Perform the search
 if domr(arg) == false
-	exit 1
+	exit 1 # Exit with code 1 (error)
 else
-	exit 0
+	exit 0 # Exit with code 0 (success)
 end
