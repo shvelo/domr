@@ -1,10 +1,10 @@
-Domr
+Domr [![Build Status](https://secure.travis-ci.org/shvelo/domr.png)](http://travis-ci.org/shvelo/domr) [![Dependency Status](https://gemnasium.com/shvelo/domr.png)](https://gemnasium.com/shvelo/domr)
 ====
 
 Ruby gem for quick domain search
 Using Domainr JSON API
 
-[![Build Status](https://secure.travis-ci.org/shvelo/domr.png)](http://travis-ci.org/shvelo/domr)
+
 
 ### Installation
     $ gem install domr
