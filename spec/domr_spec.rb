@@ -26,7 +26,7 @@ describe 'Script domr' do
     end
   end
   context 'With argument "example"' do
-    it 'EDoes not exit with code 1' do
+    it 'Does not exit with code 1' do
       system 'domr example'
       $?.exitstatus.should_not eq 1
     end
