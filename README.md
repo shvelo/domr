@@ -6,7 +6,9 @@ Using Domainr JSON API
 
 ### Installation
     $ gem install domr
+
 To enable output coloring on Windows you need win32console and windows-pr gems <br>
+
     $ gem install win32console windows-pr
 
 ### Usage
