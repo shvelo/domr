@@ -4,11 +4,10 @@ Domr [![Build Status](https://secure.travis-ci.org/shvelo/domr.png)](http://trav
 Ruby gem for quick domain search
 Using Domainr JSON API
 
-To enable output coloring on Windows you need win32console and windows-pr gems
-    $ gem install win32console windows-pr
-
 ### Installation
     $ gem install domr
+To enable output coloring on Windows you need win32console and windows-pr gems <br>
+    $ gem install win32console windows-pr
 
 ### Usage
     $ domr <name>
