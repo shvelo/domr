@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 gem "rspec"
 gem "rainbow"
-gem "json"
+gem "httparty"
 
 platforms :mswin, :mingw do
   gem "windows-pr"

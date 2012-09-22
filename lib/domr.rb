@@ -1,7 +1,6 @@
 require 'rainbow'
 require 'uri'
-require 'net/http'
-require 'json'
+require 'httparty'
 
 # Perform a query on domainr API
 
@@ -22,21 +21,8 @@ def domr(query, flag = :none)
     silent = false
   end
   
-  # Form the request string
-  request = Net::HTTP::Get.new('/api/json/search?q=' << URI.escape(query))
-
-  # Perform the actual query
-  response = Net::HTTP.start('domai.nr') do |http|
-    http.request request
-  end
-
-  # Check for errors
-  if response.code != '200'
-    puts "HTTP error".color(:red).bright if !silent
-    return false
-  end
-
-  results = JSON.parse(response.body)['results']
+  # Query the Domainr API
+  results = HTTParty.get('http://domai.nr/api/json/search?q=' << URI.escape(query))['results'];
 
   # Output results
   results.each do |result|
