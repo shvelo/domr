@@ -1,17 +1,18 @@
 #!/usr/bin/env ruby
 
+$:.unshift File.join(File.dirname(__FILE__), %w[.. lib])
 require 'domr'
 
 # Check for empty query
 if !ARGV[0]
-	arg = ''
+  arg = ''
 else
-	arg = ARGV.join " "
+  arg = ARGV.join " "
 end
 
 # Perform the search
 if domr(arg) == false
-	exit 1 # Exit with code 1 (error)
+  exit 1 # Exit with code 1 (error)
 else
-	exit 0 # Exit with code 0 (success)
+  exit 0 # Exit with code 0 (success)
 end
