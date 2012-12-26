@@ -20,19 +20,19 @@ def domr(query, flag = :none)
   else
     silent = false
   end
-  
+
   # Query the Domainr API
   results = HTTParty.get('http://domai.nr/api/json/search?q=' << URI.escape(query))['results'];
 
   # Output results
   results.each do |result|
 
-  # Determine color to show
+    # Determine color to show
     case result['availability']
     when 'available'
       color = :green
     when  'taken', 'unavailable'
-      color = :default
+      color = :red
     when 'maybe'
       color = :yellow
     else
