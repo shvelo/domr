@@ -40,12 +40,12 @@ def domr(query, flag = :none)
     end
 
     # Construct final output string
-    string = ' ' << result['domain'] << ' ' << result['availability']
+    string = "#{result['domain']} #{result['availability']}"
 
     # Output colorized string
     puts string.color(color).bright if !silent
   end
 
   # Return number of available domain names
-  return results.count { |result| result['availability'] == 'available' }
+  return results.select { |result| result['availability'] == 'available' }.collect { |result| result['domain'] }
 end
