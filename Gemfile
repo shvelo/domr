@@ -1,8 +1,5 @@
 source "http://rubygems.org"
-
-gem "rspec"
-gem "rainbow"
-gem "httparty"
+gemspec
 
 platforms :mswin, :mingw do
   gem "windows-pr"
