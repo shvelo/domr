@@ -5,16 +5,22 @@ Ruby gem for quick domain search
 Using Domainr JSON API
 
 ### Installation
-    $ gem install domr
+```shell
+$ gem install domr
+```
 
 To enable output coloring on Windows you need win32console and windows-pr gems <br>
-
-    $ gem install win32console windows-pr
-
+```shell
+$ gem install win32console windows-pr
+```
 ### Usage
-    $ domr <name>
+```shell
+$ domr <name>
+```
     
 ### Example usage
-    $ domr example.com
+```shell
+$ domr example.com
+```
 
 ![Output](http://shvelo.github.com/domr/images/full.jpg)
