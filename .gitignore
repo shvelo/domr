@@ -1,4 +1,5 @@
 .project
+Thumbs.db
 images/Thumbs.db
 *.gem
 Gemfile.lock
