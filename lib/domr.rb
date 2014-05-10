@@ -43,7 +43,7 @@ def domr(query, flag = :none)
     string = "#{result['domain']} #{result['availability']}"
 
     # Output colorized string
-    puts string.color(color).bright if !silent
+    puts Rainbow(string).color(color).bright if !silent
   end
 
   # Return number of available domain names
